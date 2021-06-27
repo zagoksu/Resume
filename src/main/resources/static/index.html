@@ -1,11 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.btn-container {
+    text-align: center;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+#main{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+}
+#buttons{
+    max-width:200px;
+    margin: auto;
+
+}
+#photo{
+display: none;
+}
+
+#text-container{
+    font-size:1.2rem;
+
+}
+.form{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  margin: auto;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+</style>
 </head>
 <body>
-<h1>Welcome to the HomePage!</h1>
+<div class="header">
+    <h1>Resume</h1>
+    <p>This is a demo resume of me.</p>
+</div>
+
+<div class="topnav">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">Education</a></li>
+        <li><a href="#contact">Work</a></li>
+        <li style="float:right"><a class="active" href="#about">Contact</a></li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="column">
+        <h2>Education</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        <div style="text-align:center margin-top: 5% margin-bottom:5%" >
+            <table>
+                <tr>
+                    <th>Exams</th>
+                    <th>TOEFL</th>
+                    <th>ILTS</th>
+                    <th>Javascript</th>
+                </tr>
+                <tr>
+                    <th>Score</th>
+                    <td>90</td>
+                    <td>80</td>
+                    <td>70</td>
+                </tr>
+            </table>
+        </div>
+        <div id="main" style="margin-top: 5%;">
+            <div id="text-container">
+                <div id="quote">
+                    Those who dare to fail miserably can achieve greatly</div>
+                <div id="author">Einstein</div>
+            </div>
+            <div id="button-container">
+                <div id="buttons">
+                    <button id="btn">Show Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <div class="btn-container"><button id="btn-photo" class="btn" name="btn" type="button" onclick="document.getElementById('photo').style.display='block'">Click to see Profile Photo</button></div>
+            <a href=""><img id="photo" src="https://pbs.twimg.com/profile_images/1390973758085681157/qvW9y3kZ_400x400.jpg" alt="zeynel" style="width:100%"></a>
+            <h2>Zeynel Abidin Goksu</h2>
+            <p class="title">Front End Developer</p>
+            <p>Capgemini</p>
+            <div style="margin: 24px 0;">
+                <a href="https://twitter.com/zagoksu"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/zagoksu/"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/zagoksu"><i class="fa fa-github"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="column">
+
+        <h2>Work</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+
+        <div class="form">
+            <h2>How did you find my website?</h2>
+            <form action="/action_page.php" method="get">
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Super</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS" checked="checked">
+                <label for="css">Cool</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">Not Bad</label><br><br>
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>Footer</p>
+</div>
+
+<script>
+const myFavQuotes = [
+    {
+      quote: 'Those who dare to fail miserably can achieve greatly.',
+      author: 'John F. Kennedy',
+    },
+    {
+      quote: 'If you want to live a happy life, tie it to a goal, not to people or things.',
+      author: 'Albert Einstein',
+    },
+    {
+      quote:'Have no fear of perfection, you will never reach it.',
+      author: 'Salvador Dali',
+    },
+    {
+      quote: 'A man who won\'t read has no advantage over man who can\'t read.',
+      author: 'Mark Twain',
+    },
+    {
+      quote:'I know Kung-Fu.',
+      author: 'Neo',
+    },
+    {
+      quote:'It\'s not a lie if you believe it.',
+      author: 'George Costanza',
+    },
+  ];
+
+  // selecting elements by their id's
+  let buttonEl = document.getElementById('btn');
+  let quoteEl = document.getElementById('quote');
+  let authorEl = document.getElementById('author');
+
+  // randomly selecting a quote from and author
+  buttonEl.onclick = function getRandomQuote() {
+    let randomQuote = myFavQuotes[Math.floor(Math.random() * myFavQuotes.length)];
+    quoteEl.textContent = randomQuote.quote;
+    authorEl.textContent = " " + randomQuote.author;
+  }
+
+</script>
 
 </body>
 </html>
